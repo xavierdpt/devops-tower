@@ -16,12 +16,18 @@ vagrant ssh-config > ssh-config
 ssh -F ssh-config -X default
 ```
 
+## Install firefox
+
+apt-get update
+apt-get upgrade
+apt-get install firefox
+
 ## Demo project
 
 Install java
 
 ```
-sudo apt-get install openjdk-11-jre
+sudo apt-get install openjdk-11-jdk
 ```
 
 Install eclipse and Spring Tools
