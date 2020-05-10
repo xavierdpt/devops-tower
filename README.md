@@ -106,9 +106,9 @@ exit
 Stop container, commit changes, set entrypoint to sshd server, and start container
 ```
 sudo docker container ls -a # Check that git container is stopped
-sudo docker commit -c 'CMD ["/usr/sbin/sshd"]' git git
+sudo docker commit -c 'CMD ["/usr/sbin/sshd","-D"]' git git
 sudo docker container rm git
-sudo docker run -p 2222:22 git
+sudo docker run -d -p 2222:22 git
 ```
 
 TODO: Set up volume mounts to not have the mutable data part of the image.
